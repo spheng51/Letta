@@ -1,5 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letta Chat Widget</title>
+    <style>
+      /* make bubble sit above Rise360 content but below any modals */
+      #letta-container {
+        position: relative;
+        z-index: 1500;
+      }
+      /* scale down on small screens */
+      @media (max-width: 600px) {
+        .letta-bubble {
+          transform: scale(0.8);
+          bottom: 10px !important;
+          right: 10px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="letta-container">
+      <script>
+        window.lettaSettings = {
+          agentId: "your-agent-id",
+          bubblePosition: "bottom-right",
+          bubbleColor: "#0055A4",
+          greetingText: "Need help? Ask me anything!",
+          theme: {
+            fontFamily: "Arial, sans-serif",
+            fontSize: "16px"
+          }
+        };
+      </script>
+      <script src="https://cdn.getletta.com/let.js" async></script>
+    </div>
+=======
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +61,10 @@
 		<div id="letta-container">
 			<script>
                                 window.lettaSettings = {
+
+=======
+                                        <!-- Replace "your-agent-id" with your actual Letta agent ID -->
+
                                         agentId: "your-agent-id",
 					bubblePosition: "bottom-right",
 					bubbleColor: "#0055A4",
@@ -37,20 +78,20 @@
 			<script src="https://cdn.getletta.com/let.js" async></script>
 		</div>
 
-		<script>
-			// Enhance for keyboard & screen-reader access once Letta has loaded
-			window.addEventListener("letta:ready", () => {
-				const bubble = document.querySelector(".letta-bubble");
-				if (bubble) {
-					bubble.setAttribute("role", "button");
-					bubble.setAttribute("aria-label", "Open chat help");
-					bubble.tabIndex = 0;
-					bubble.addEventListener("keydown", e => {
-						if (e.key === "Enter" || e.key === " ") bubble.click();
-					});
-				}
-			});
-		</script>
+    <script>
+      // Enhance for keyboard & screen-reader access once Letta has loaded
+      window.addEventListener("letta:ready", () => {
+        const bubble = document.querySelector(".letta-bubble");
+        if (bubble) {
+          bubble.setAttribute("role", "button");
+          bubble.setAttribute("aria-label", "Open chat help");
+          bubble.tabIndex = 0;
+          bubble.addEventListener("keydown", e => {
+            if (e.key === "Enter" || e.key === " ") bubble.click();
+          });
+        }
+      });
+    </script>
 
                 <noscript>
                         <div style="padding:1em; background:#fdecea; color:#611a15; border:1px solid #f5c2c7;">
@@ -60,4 +101,12 @@
                         </div>
                 </noscript>
 	</body>
+=======
+    <noscript>
+      <div style="padding:1em; background:#fdecea; color:#611a15; border:1px solid #f5c2c7;">
+        Chat help is currently unavailable. Please email
+        <a href="mailto:help@yourdomain.com">help@yourdomain.com</a>.
+      </div>
+    </noscript>
+  </body>
 </html>
