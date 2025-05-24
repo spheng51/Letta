@@ -8,7 +8,7 @@ The goal is to provide instructional designers with a lightweight way to add an 
 
 1. Publish your Rise360 course (web or LMS package).
 2. Insert the code from [`embed.html`](embed.html) into the course's `index.html` (or a common layout file) just before the closing `</body>` tag.
-3. Replace the `agentId` value with your own Letta agent ID.
+3. Replace the `agentId` placeholder (`your-agent-id`) with the ID from your Letta account.
 4. Upload the modified course to your LMS or web host.
 
 When learners view the course, the Letta bubble will appear in the corner of the screen. Clicking it opens a chat window connected to your configured Letta agent.
@@ -41,4 +41,5 @@ See the project plan in the repository discussions for more details.
 <script src="https://cdn.getletta.com/let.js" async></script>
 ```
 
-Include this snippet in your course files to enable the assistant.
+Include this snippet in your course files to enable the assistant. Make sure to
+replace `your-agent-id` with the ID assigned to your bot in the Letta dashboard.
