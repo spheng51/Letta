@@ -6,12 +6,25 @@ The goal is to provide instructional designers with a lightweight way to add an 
 
 ## Usage
 
-1. Publish your Rise360 course (web or LMS package).
-2. Insert the code from [`embed.html`](embed.html) into the course's `index.html` (or a common layout file) just before the closing `</body>` tag.
-3. Replace the `agentId` value with your own Letta agent ID.
-4. Upload the modified course to your LMS or web host.
+1. Export your course from Rise360 as a **Web** or **LMS** package and download the ZIP archive.
+2. Extract the archive to a local folder on your computer.
+3. Open the course's `index.html` file in a text editor.
+4. Copy the markup from [`embed.html`](embed.html) and paste it immediately **before** the closing `</body>` tag in `index.html` (or any common layout file used by your course).
+5. Replace the `agentId` value in the snippet with the ID of your own Letta agent.
+6. Save the file and re‑zip the course if required by your LMS.
+7. Upload the updated package to your LMS or web host.
 
 When learners view the course, the Letta bubble will appear in the corner of the screen. Clicking it opens a chat window connected to your configured Letta agent.
+
+### Optional: automate the injection
+
+You can use the helper script in the `scripts/` directory to insert the snippet automatically:
+
+```bash
+python scripts/inject_snippet.py path/to/index.html
+```
+
+Pass a second argument to specify a custom snippet file. After running the script, deploy the course as usual.
 
 ## Project Plan
 
