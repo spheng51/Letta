@@ -64,8 +64,14 @@ See the project plan in the repository discussions for more details.
 ```
 
 
+Include this snippet in your course files to enable the assistant.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+=======
+
 Include this snippet in your course files to enable the assistant. Make sure to
 replace `your-agent-id` with the ID assigned to your bot in the Letta dashboard.
 =======
 Include this snippet in your course files to enable the assistant. Make sure to replace `your-agent-id` with the ID assigned to your bot in the Letta dashboard. Also update `help@yourdomain.com` with your own support email.
-
