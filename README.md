@@ -6,22 +6,14 @@ The goal is to provide instructional designers with a lightweight way to add an 
 
 ## Usage
 
-
-1. Publish your Rise360 course (web or LMS package).
-2. Insert the code from [`embed.html`](embed.html) into the course's `index.html` (or a common layout file) just before the closing `</body>` tag.
-3. Replace the `agentId` placeholder (`your-agent-id`) with the ID from your Letta account.
-4. Update the `<noscript>` block's contact email (`help@yourdomain.com`) so learners can reach you if the widget fails to load.
-5. Upload the modified course to your LMS or web host.
-=======
 1. Export your course from Rise360 as a **Web** or **LMS** package and download the ZIP archive.
 2. Extract the archive to a local folder on your computer.
 3. Open the course's `index.html` file in a text editor.
 4. Copy the markup from [`embed.html`](embed.html) and paste it immediately **before** the closing `</body>` tag in `index.html` (or any common layout file used by your course).
 5. Replace the `agentId` placeholder (`your-agent-id`) with the ID from your Letta account.
-6. Update the fallback email address in the snippet. Replace `help@yourdomain.com` with your own support email.
+6. Update the fallback email address in the snippet. Replace `help@yourdomain.com` with your team's support email.
 7. Save the file and re‑zip the course if required by your LMS.
 8. Upload the updated package to your LMS or web host.
-
 
 When learners view the course, the Letta bubble will appear in the corner of the screen. Clicking it opens a chat window connected to your configured Letta agent.
 
@@ -63,15 +55,9 @@ See the project plan in the repository discussions for more details.
 <script src="https://cdn.getletta.com/let.js" async></script>
 ```
 
-
-Include this snippet in your course files to enable the assistant.
+Include this snippet in your course files to enable the assistant. Make sure to replace `your-agent-id` with the ID assigned to your bot in the Letta dashboard. **Don't forget to update `help@yourdomain.com` in the `<noscript>` block to use your team's support address.**
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-=======
 
-Include this snippet in your course files to enable the assistant. Make sure to
-replace `your-agent-id` with the ID assigned to your bot in the Letta dashboard.
-=======
-Include this snippet in your course files to enable the assistant. Make sure to replace `your-agent-id` with the ID assigned to your bot in the Letta dashboard. Also update `help@yourdomain.com` with your own support email.
